@@ -1,0 +1,4 @@
+github.com/karrick/godirwalk v1.16.1/go.mod h1:j4mkqPuvaLI8mp1DroR3P6ad7cyYd4c1qeJ3RV7ULlk=
+github.com/upcraftlp/go-utils v0.0.0-20201223221138-0cf030ac26fd h1:mpms5Y9tEi7cAoA5fVfcUScaABNvFBvFRVBNJOTk3+k=
+github.com/upcraftlp/go-utils v0.0.0-20201223221138-0cf030ac26fd/go.mod h1:dNdpC5jWDxsUtgfUVxA3caHcgdTUAyf20GCpvXym1dk=
+gopkg.in/natefinch/npipe.v2 v2.0.0-20160621034901-c1b8fa8bdcce/go.mod h1:5AcXVHNjg+BDxry382+8OKon8SEWiKktQR07RKPsv1c=
