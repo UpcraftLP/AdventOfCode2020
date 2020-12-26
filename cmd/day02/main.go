@@ -32,10 +32,10 @@ func main() {
 			validPasswords2++
 		}
 	}
-	log.Printf("Valid Passowrds: %v\n", validPasswords1)
+	log.Printf("Valid Passwords: %v\n", validPasswords1)
 
 	util2.Part2()
-	log.Printf("Valid Passowrds: %v\n", validPasswords2)
+	log.Printf("Valid Passwords: %v\n", validPasswords2)
 
 	util2.End()
 }
