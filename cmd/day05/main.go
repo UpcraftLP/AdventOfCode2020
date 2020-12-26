@@ -1,14 +1,14 @@
 package main
 
 import (
-	util2 "github.com/upcraftlp/AdventOfCode2020/internal/util"
+	"github.com/upcraftlp/AdventOfCode2020/internal/aoc"
 	"log"
 	"strconv"
 	"strings"
 )
 
 func main() {
-	lines := util2.GetInput(05)
+	lines := aoc.GetInput(5)
 
 	var seats = make(map[uint]Seat)
 	for _, line := range lines {
@@ -23,7 +23,7 @@ func main() {
 			Col: uint(col),
 		}
 	}
-	util2.Part1()
+	aoc.Part1()
 	seat := Seat{}
 	for _, s := range seats {
 		if s.ID > seat.ID {
@@ -31,7 +31,7 @@ func main() {
 		}
 	}
 	log.Printf("Highest seat ID: %v (r: %v, c: %v)\n", seat.ID, seat.Row, seat.Col)
-	util2.Part2()
+	aoc.Part2()
 	var mySeat uint
 	for id := uint(8); id < 127*8; id++ {
 		if _, ok := seats[id]; !ok { // seat does not exist
@@ -44,7 +44,7 @@ func main() {
 		}
 	}
 	log.Printf("Missing Seat: %v\n", mySeat)
-	util2.End()
+	aoc.End()
 }
 
 type Seat struct {

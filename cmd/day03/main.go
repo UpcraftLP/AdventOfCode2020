@@ -1,17 +1,17 @@
 package main
 
 import (
-	util2 "github.com/upcraftlp/AdventOfCode2020/internal/util"
+	"github.com/upcraftlp/AdventOfCode2020/internal/aoc"
 	"log"
 )
 
 func main() {
-	lines := util2.GetInput(03)
-	util2.Part1()
+	lines := aoc.GetInput(3)
+	aoc.Part1()
 	trees := findTrees(lines, 3, 1)
 	log.Printf("Trees: %v\n", trees)
 
-	util2.Part2()
+	aoc.Part2()
 
 	a := findTrees(lines, 1, 1)
 	b := trees
@@ -23,7 +23,7 @@ func main() {
 	log.Println()
 	log.Printf("Total: %v, Mul: %v", a+b+c+d+e, a*b*c*d*e)
 
-	util2.End()
+	aoc.End()
 }
 
 func findTrees(lines []string, xInc, yInc int) int {

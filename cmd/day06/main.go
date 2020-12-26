@@ -1,14 +1,14 @@
 package main
 
 import (
-	util2 "github.com/upcraftlp/AdventOfCode2020/internal/util"
+	"github.com/upcraftlp/AdventOfCode2020/internal/aoc"
 	"log"
 	"strings"
 )
 
 func main() {
-	lines := util2.GetInputKeepEmpty(06)
-	util2.Part1()
+	lines := aoc.GetInputKeepEmpty(6)
+	aoc.Part1()
 	counter := 0
 	current := make(map[string]struct{})
 	for _, line := range lines {
@@ -26,7 +26,7 @@ func main() {
 	}
 	log.Printf("Amount of 'yes' answers: %d\n", counter)
 
-	util2.Part2()
+	aoc.Part2()
 	counter = 0
 	sum := 0
 	test := make(map[string]bool)
@@ -60,5 +60,5 @@ func main() {
 	counter = 0
 	log.Printf("Amount of 'ALL yes' answers: %d\n", sum)
 
-	util2.End()
+	aoc.End()
 }

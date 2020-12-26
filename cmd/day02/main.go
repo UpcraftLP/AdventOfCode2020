@@ -1,15 +1,15 @@
 package main
 
 import (
-	util2 "github.com/upcraftlp/AdventOfCode2020/internal/util"
+	"github.com/upcraftlp/AdventOfCode2020/internal/aoc"
 	"log"
 	"strconv"
 	"strings"
 )
 
 func main() {
-	lines := util2.GetInput(02)
-	util2.Part1()
+	lines := aoc.GetInput(2)
+	aoc.Part1()
 
 	validPasswords1 := 0
 	validPasswords2 := 0
@@ -34,10 +34,10 @@ func main() {
 	}
 	log.Printf("Valid Passwords: %v\n", validPasswords1)
 
-	util2.Part2()
+	aoc.Part2()
 	log.Printf("Valid Passwords: %v\n", validPasswords2)
 
-	util2.End()
+	aoc.End()
 }
 
 type PasswordPolicy struct {

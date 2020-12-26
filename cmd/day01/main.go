@@ -2,19 +2,19 @@ package main
 
 import (
 	"errors"
-	util2 "github.com/upcraftlp/AdventOfCode2020/internal/util"
+	"github.com/upcraftlp/AdventOfCode2020/internal/aoc"
 	"github.com/upcraftlp/go-utils/pkg/std"
 	"log"
 	"strconv"
 )
 
 func main() {
-	lines := util2.GetInput(01)
-	util2.Part1()
+	lines := aoc.GetInput(1)
+	aoc.Part1()
 	a, b, _ := findSumTo(lines, 2020)
 	log.Printf("found: %v + %v; multiplied: %v\n", a, b, a*b)
 
-	util2.Part2()
+	aoc.Part2()
 	for _, currentLine := range lines {
 		num, _ := strconv.Atoi(currentLine)
 		toFind := 2020 - num
@@ -25,7 +25,7 @@ func main() {
 		}
 	}
 
-	util2.End()
+	aoc.End()
 }
 
 func findSumTo(lines []string, targetSum int) (int, int, error) {

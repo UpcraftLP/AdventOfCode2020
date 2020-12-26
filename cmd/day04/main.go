@@ -2,7 +2,7 @@ package main
 
 import (
 	"errors"
-	util2 "github.com/upcraftlp/AdventOfCode2020/internal/util"
+	"github.com/upcraftlp/AdventOfCode2020/internal/aoc"
 	"github.com/upcraftlp/go-utils/pkg/std"
 	"log"
 	"strconv"
@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	lines := util2.GetInputKeepEmpty(04)
+	lines := aoc.GetInputKeepEmpty(4)
 	var passports []Passport = nil
 
 	var currentLines []string = nil
@@ -24,7 +24,7 @@ func main() {
 			currentLines = append(currentLines, line)
 		}
 	}
-	util2.Part1()
+	aoc.Part1()
 	complete := 0
 	for _, currentPass := range passports {
 		err := currentPass.checkFieldsPresent()
@@ -38,7 +38,7 @@ func main() {
 	}
 	log.Printf("Complete Passports: %v\n", complete)
 
-	util2.Part2()
+	aoc.Part2()
 	valid := 0
 	for _, currentPass := range passports {
 		err := currentPass.validate()
@@ -52,7 +52,7 @@ func main() {
 	}
 	log.Printf("Valid Passports: %v\n", valid)
 
-	util2.End()
+	aoc.End()
 }
 
 func (p *Passport) validate() error {
